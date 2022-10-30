@@ -1,0 +1,19 @@
+{
+  "name": "backendsquirreltech",
+  "version": "1.0.0",
+  "description": "backend da loja E-commerce Squirrel Tech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonioPinheiro66484/backendSquirrelTech.git"
+  },
+  "author": "Antonio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonioPinheiro66484/backendSquirrelTech/issues"
+  },
+  "homepage": "https://github.com/AntonioPinheiro66484/backendSquirrelTech#readme"
+}
