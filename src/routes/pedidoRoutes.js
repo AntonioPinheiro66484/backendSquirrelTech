@@ -4,8 +4,8 @@ const routePedido = express.Router()
 routePedido
     .get("/mostrar-pedidos", pedidoController.listarPedidos)
     .post("/cadastrar-pedido", pedidoController.cadastrarPedidos)
-    .put("/atualizar-pedidos/:id", pedidoController.atualizarPedidos)
-    .delete("/deletar-pedidos/:id", pedidoController.excluirPedidos)
-    .get("/mostrar-pedidos/:id", pedidoController.listarPedidos)
+    .put("/atualizar-pedidos/:id", pedidoController.atualizarPedido)
+    .delete("/deletar-pedidos/:id", pedidoController.excluirPedido)
+    .get("/mostrar-pedidos/:id", pedidoController.listarPedido)
 
-module.exports = routepedidos
+module.exports = routePedido

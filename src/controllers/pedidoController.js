@@ -1,6 +1,6 @@
 const pedido = require("../models/pedidos.js")
 
-class pedidosController{
+class pedidoController{
     static listarPedidos=(req,res)=>{
         pedido.find((err,pedidos)=>{
             res.status(200).json(pedidos)
@@ -61,4 +61,4 @@ class pedidosController{
     }
 }
 
-module.exports=pedidosController;
+module.exports=pedidoController;
