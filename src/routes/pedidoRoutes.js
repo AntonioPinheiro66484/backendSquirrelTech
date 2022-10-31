@@ -1,11 +1,11 @@
 const express = require("express")
-const pedidoController = require("../controllers/pedidoscontroller.js")
+const pedidoController = require("../controllers/pedidocontroller.js")
 const routePedido = express.Router()
 routePedido
     .get("/mostrar-pedidos", pedidoController.listarPedidos)
     .post("/cadastrar-pedido", pedidoController.cadastrarPedidos)
-    .put("/atualizar-pedidos/:id", pedidoController.atualizarPedido)
-    .delete("/deletar-pedidos/:id", pedidoController.excluirPedido)
-    .get("/mostrar-pedidos/:id", pedidoController.listarPedido)
+    .put("/atualizar-pedidos/:id", pedidoController.atualizarPedidos)
+    .delete("/deletar-pedidos/:id", pedidoController.excluirPedidos)
+    .get("/mostrar-pedidos/:id", pedidoController.listarPedidos)
 
 module.exports = routePedido
