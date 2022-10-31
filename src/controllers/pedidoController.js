@@ -7,7 +7,7 @@ class pedidoController{
         })
     }
     static cadastrarPedidos=(req,res)=>{
-        let pedidos = new pedidos(req.body)
+        let pedidos = new pedido(req.body)
         pedidos.save((err)=>{
             if(err){
                 res.status(500).send({

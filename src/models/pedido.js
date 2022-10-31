@@ -18,4 +18,4 @@ const pedidoEsquema = new mongoose.Schema(
 )
 
 const pedido=mongoose.model("pedido",pedidoEsquema)
-module.exports=cliente;
+module.exports=pedido;
