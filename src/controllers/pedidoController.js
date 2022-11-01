@@ -1,4 +1,4 @@
-const pedido = require("../models/pedidos.js")
+const pedido = require("../models/pedido.js")
 
 class pedidoController{
     static listarPedidos=(req,res)=>{
@@ -11,7 +11,7 @@ class pedidoController{
         pedidos.save((err)=>{
             if(err){
                 res.status(500).send({
-                    massage:`${err.message}-falha ao cadastrar um pedidos`
+                    massage:`${err.message}-falha ao cadastrar um pedido`
                 })
             }else{
                 res.status(200).send(pedidos.toJSON())
@@ -19,42 +19,42 @@ class pedidoController{
         })
     }
 
-    static atualizarPedidos=(req,res)=>{
+    static atualizarPedido=(req,res)=>{
         const id = req.params.id
         pedido.findByIdAndUpdate(id,{$set: req.body},(err)=>{
             if(!err){
                 res.status(200).send({
-                    message:'pedidos atualizado com sucesso'
+                    message:'pedido atualizado com sucesso'
                 })
             }else{
                 res.status(500).send({
-                    massage:`${err.message}-falha ao atualizar um pedidos`
+                    massage:`${err.message}-falha ao atualizar um pedido`
                 })
             }
         })
     }
-    static listarPedidos=(req,res)=>{
+    static listarPedido=(req,res)=>{
         const id = req.params.id
         pedido.findById(id,(err,pedidos)=>{
             if(!err){
                 res.status(200).send(pedidos)
             }else{
                 res.status(500).send({
-                    massage:`${err.message}-falha ao consultar um pedidos`
+                    massage:`${err.message}-falha ao consultar um pedido`
                 })
             }
         })
     }
-    static excluirPedidos=(req,res)=>{
+    static excluirPedido=(req,res)=>{
         const id = req.params.id
         pedido.findByIdAndDelete(id,(err)=>{
             if(!err){
                 res.status(200).send({
-                    message:'pedidos excluido com sucesso'
+                    message:'pedido excluido com sucesso'
                 })
             }else{
                 res.status(500).send({
-                    massage:`${err.message}-falha ao excluir um pedidos`
+                    massage:`${err.message}-falha ao excluir um pedido`
                 })
             }
         })

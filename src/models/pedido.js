@@ -6,13 +6,13 @@ const pedidoEsquema = new mongoose.Schema(
             required: true
         },
         codigoProduto: {
-            type: Number,
+            type: String,
             required: true
         },
         Quantidade: {
-            type: Number,
+            type: String,
             required: true
-        },
+        }
 
     }
 )
